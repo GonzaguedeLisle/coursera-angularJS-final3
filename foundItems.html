@@ -1,0 +1,13 @@
+<br><br><br>
+<ul>
+    <!-- Gets the isolate scope data and passes the index-->
+    <div ng-repeat="item in foundItems">
+        <li>
+        {{item.name | uppercase }}
+        <br>
+        -> {{ item.description }}
+        <button ng-click="onRemove({index: $index});">Don't want this one !</button>
+        </li>
+    </div>
+</ul>
+<div class="alert alert-primary" role="alert" ng-if="foundItems.length === 0">Nothing found</div>
